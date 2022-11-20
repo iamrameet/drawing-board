@@ -1,0 +1,58 @@
+.chat-area form{
+  display: flex;
+  border-top: 0.1em solid #000;
+}
+
+.chat-area form input{
+  padding: 0.8em 1em;
+  width: 100%;
+  border: unset;
+}
+.chat-area form button{
+  padding: 0.8em 1.2em;
+  background-color: #000;
+  color: #fff;
+  border: unset;
+}
+
+.chat-area #messages{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.chat-area #messages .message{
+  display: flex;
+  padding: 0.5em 0.7em;
+  width: 100%;
+  line-height: 1.5em;
+}
+.chat-area #messages .message:nth-child(2n){
+  background-color: #eee;
+}
+.chat-area #messages .message .user{
+  font-weight: bold;
+}
+.chat-area #messages .message .user::after{
+  content: ":";
+}
+.chat-area #messages .message .content{
+  padding: 0 0.5em;
+}
+
+.chat-area #messages .message:is(.info, .warn, .error, .success){
+  display: block;
+  /* text-align: center; */
+}
+.chat-area #messages .message.info{
+  background-color: lightblue;
+}
+.chat-area #messages .message.warn{
+  background-color: lightgoldenrodyellow;
+}
+.chat-area #messages .message.error{
+  background-color: lightcoral;
+}
+.chat-area #messages .message.success{
+  background-color: lightgreen;
+}

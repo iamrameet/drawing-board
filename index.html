@@ -5,10 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Drawing Board</title>
   <link rel="stylesheet" href="styles/style.css"/>
-  <script type="text/javascript" src="library/dom.js"></script>
+  <link rel="stylesheet" href="styles/left-bar.css"/>
+  <link rel="stylesheet" href="styles/right-bar.css"/>
+  <script type="text/javascript" src="file:///E:/library/listener.js"></script>
+  <script type="text/javascript" src="file:///E:/library/dom.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
-  <canvas width="400" height="400" id="canvas"></canvas>
+  <div class="side-bar players-area">
+    <div class="caption">Players</div>
+    <div class="player">
+      <div class="rank">1</div>
+      <div class="info">
+        <div class="name">Prateek</div>
+        <div class="points">64</div>
+      </div>
+      <div class="avatar">
+        <img src="https://i.pravatar.cc/64?i=1"/>
+      </div>
+    </div>
+    <div class="player">
+      <div class="rank">2</div>
+      <div class="info">
+        <div class="name">Sahil</div>
+        <div class="points">48</div>
+      </div>
+      <div class="avatar">
+        <img src="https://i.pravatar.cc/64?i=0"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="title-bar">
+    <div class="word-area">
+      <div class="word">_____ _____</div>
+      <sup>5</sup>
+      <sup>5</sup>
+    </div>
+  </div>
+
+  <div class="drawing-area">
+    <canvas width="400" height="400" id="canvas"></canvas>
+  </div>
+
+  <div class="tool-bar">
+    <div class="tool" id="colors">
+      <div class="caption">Colors</div>
+    </div>
+    <div class="tool" id="brushes">
+      <div class="caption">Brushes</div>
+    </div>
+  </div>
+
+  <div class="side-bar chat-area">
+    <div class="caption">Chat</div>
+    <div id="messages">
+      <div class="message">
+        <div class="user">Prateek</div>
+        <div class="content">Hi</div>
+      </div>
+      <div class="message success"><b>Prateek</b> joined the chat</div>
+      <div class="message">
+        <div class="user">Sahil</div>
+        <div class="content">Theek se likh kya likh raha hai? Samajh to aaye kuch</div>
+      </div>
+      <div class="message error"><b>Prateek</b> left the chat</div>
+      <div class="message warn"><b>Word</b> is close</div>
+      <div class="message info"><b>Prateek</b> is choosing a word</div>
+    </div>
+    <form action="#">
+      <input type="text" placeholder="Type your message here..."/>
+      <button type="sublit">Send</button>
+    </form>
+  </div>
+
 </body>
 </html>

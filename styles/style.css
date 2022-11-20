@@ -1,5 +1,116 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
-#canvas{
-  margin: 2em;
+body{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1em;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+.side-bar{
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  width: 20%;
+  height: 100%;
+  border: 0.1em solid #000;
+}
+
+.side-bar .caption{
+  width: 100%;
+  line-height: 2em;
+  font-size: large;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 0.1em solid #000;
+}
+
+.title-bar,
+.drawing-area,
+.tool-bar{
+  display: flex;
+  margin: 1em;
+  width: 100%;
+  max-width: 800px;
+}
+
+.title-bar{
+  padding: 0.5em;
+  justify-content: center;
+  border: 0.1em solid #000;
+}
+.title-bar .word-area{
+  display: flex;
+  letter-spacing: 0.5em;
+}
+.title-bar .word-area .word{
+  line-height: 1.5em;
+  font-size: x-large;
+  text-transform: uppercase;
+}
+
+.drawing-area{
+  height: calc(100% - 100px - 11em);
+}
+
+#canvas{
+  display: block;
+  border: 1px solid #000;
+}
+
+.tool-bar{
+  height: 6.1em;
+  border: 0.1em solid #000;
+  box-sizing: content-box;
+}
+
+.tool-bar .tool{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 100%;
+  border-right: 0.1em solid #000;
+}
+.tool-bar .tool>[active]{
+  border: 0.1em solid #000;
+  box-shadow: 0 0 0.2em #fff inset;
+}
+.tool-bar .tool .caption{
+  width: 100%;
+  line-height: 2em;
+  text-align: center;
+  border-bottom: 0.1em solid #000;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.tool-bar .tool#colors{
+  width: 22.1em;
+}
+#colors .color{
+  width: 2em;
+  height: 2em;
+}
+
+.tool-bar .tool#brushes{
+  width: 8.1em;
+}
+#brushes .brush{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+}
+#brushes .brush:hover{
+  background-color: #ddd;
+}
+/* #brushes .brush>div{
+  background-color: black;
+  border-radius: 50%;
+} */
